@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+    <div class="calculator">
+        <input type="text" class="display" id="result" disabled>
+        <div class="buttons">
+            <!-- First Row: Clear, Parentheses, Backspace -->
+            <button class="btn btn-clear" onclick="clearResult()">C</button>
+            <button class="btn btn-parenthesis" onclick="appendParenthesis('(')">(</button>
+            <button class="btn btn-parenthesis" onclick="appendParenthesis(')')">)</button>
+            <button class="btn btn-backspace" onclick="backspace()">←</button>
+
+            <!-- Second Row: Numbers and Multiplication -->
+            <button class="btn btn-number" onclick="appendNumber('7')">7</button>
+            <button class="btn btn-number" onclick="appendNumber('8')">8</button>
+            <button class="btn btn-number" onclick="appendNumber('9')">9</button>
+            <button class="btn btn-operator" onclick="appendOperator('*')">*</button>
+
+            <!-- Third Row: More Numbers and Subtraction -->
+            <button class="btn btn-number" onclick="appendNumber('4')">4</button>
+            <button class="btn btn-number" onclick="appendNumber('5')">5</button>
+            <button class="btn btn-number" onclick="appendNumber('6')">6</button>
+            <button class="btn btn-operator" onclick="appendOperator('-')">-</button>
+
+            <!-- Fourth Row: More Numbers and Addition -->
+            <button class="btn btn-number" onclick="appendNumber('1')">1</button>
+            <button class="btn btn-number" onclick="appendNumber('2')">2</button>
+            <button class="btn btn-number" onclick="appendNumber('3')">3</button>
+            <button class="btn btn-operator" onclick="appendOperator('+')">+</button>
+
+            <!-- Fifth Row: Decimal, Zero, Equal, Division -->
+            <button class="btn btn-decimal" onclick="appendDecimal()">.</button>
+            <button class="btn btn-number" onclick="appendNumber('0')">0</button>
+            <button class="btn-equal" onclick="calculate()">=</button>
+            <button class="btn btn-operator" onclick="appendOperator('/')">/</button>
+        </div>
+        <div class="theme-toggle">
+            <button onclick="toggleTheme()">Switch Theme</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

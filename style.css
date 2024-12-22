@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.dark-theme {
+    color: white;
+}
+
+.light-theme {
+    color: black;
+}
+
+.calculator {
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.7), 0 0 25px 10px rgba(0, 255, 255, 0.5);
+    background-color: #1c1c1c;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.light-theme .calculator {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px 5px rgba(255, 105, 180, 0.7), 0 0 25px 10px rgba(255, 105, 180, 0.5);
+}
+
+.display {
+    width: 95%;
+    padding: 10px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    outline: none;
+}
+
+
+.light-theme .display {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 2px solid pink;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn, .btn-equal {
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #444;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+.btn-equal {
+    background-color: #0acfc2;
+    grid-column: span 1;
+    font-size: 16px;
+}
+
+.btn-equal:hover {
+    background-color: #0acfc2;
+    box-shadow: 0 0 10px 2px #01faea;
+}
+
+.btn-decimal {
+    background-color: #0acfc2;
+}
+
+.btn-decimal:hover {
+    background-color: #0acfc2;
+    box-shadow: 0 0 10px 2px #01faea;
+}
+
+.btn-clear {
+    background-color: #d9534f;
+}
+
+.btn-clear:hover {
+    background-color: #c9302c;
+    box-shadow: 0 0 10px 2px rgba(217, 83, 79, 0.8);
+}
+
+.btn-operator {
+    background-color: #6c757d;
+}
+
+.btn-operator:hover {
+    background-color: #5a6268;
+    box-shadow: 0 0 10px 2px rgba(108, 117, 125, 0.8);
+}
+
+.btn-parenthesis {
+    background-color: #007bff;
+}
+
+.btn-parenthesis:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.8);
+}
+
+.btn-backspace {
+    background-color: #ff9800;
+}
+
+.btn-backspace:hover {
+    background-color: #f57c00;
+    box-shadow: 0 0 10px 2px rgba(255, 152, 0, 0.8);
+}
+
+.btn-number {
+    background-color: #4caf50;
+}
+
+.btn-number:hover {
+    background-color: #388e3c;
+    box-shadow: 0 0 10px 2px rgba(76, 175, 80, 0.8);
+}
+
+.theme-toggle {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.theme-toggle button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #666;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.theme-toggle button:hover {
+    background-color: #070707;
+}
